@@ -16,6 +16,7 @@ const userController = require('../controllers/userController');
  *  post:
  *   summary: Authenticate user with username and password
  *   tags: [User]
+ *   security: []
  *   requestBody:
  *     required: true
  *     content:

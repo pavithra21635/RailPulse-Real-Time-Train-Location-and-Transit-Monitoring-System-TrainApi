@@ -18,21 +18,7 @@ async function loginUser(req, res) {
       return res.status(401).json({ error: 'Invalid password' });
     }
 
-    // console.log('Hashed Password from DB:', user.password);
-    // console.log('Plaintext Password from Request:', password);
-
-    // // Check if the password is correct
-    // const passwordMatch = await bcrypt.compare(password, user.password);
-    // if (!passwordMatch) {
-    //   return res.status(401).json({ error: 'Invalid password' });
-    // }
-    // Check if password matches
-    // const passwordMatch = await bcrypt.compare(password, user.password);
-    // if (!passwordMatch) {
-    //   console.log('Invalid password');
-    //   return res.status(401).json({ error: 'Invalid password' });
-    // }
-
+  
 
 
     // Generate JWT token

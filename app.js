@@ -3,6 +3,7 @@ const mongoose = require('./src/config/database');
 const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
+const { getauthenticationToken } = require('./src/middleware/authMiddleware'); 
 
 const trainLocationRoute = require('./src/routes/trainLocationRoutes');
 const userRoute = require('./src/routes/userRoutes');
@@ -24,6 +25,20 @@ const swaggerOptions = {
                 url: 'http://localhost:3001/api',
             },
         ],
+        components: {
+            securitySchemes: {
+                BearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
+        },
+        security: [
+            {
+                BearerAuth: [], // Apply to all routes by default
+            },
+        ],
     },
     apis: ['./src/routes/*.js'], 
 };
@@ -43,11 +58,13 @@ mongoose.connection.on('error', function (err) {
     console.errpr('Mongo db connection error:', err);
 });
 
+app.use('/api/user', userRoute);
 
+app.use(getauthenticationToken);
 
 
 app.use('/api/train-location', trainLocationRoute);
-app.use('/api/user', userRoute);
+
 
 
 app.listen(PORT, () => {
