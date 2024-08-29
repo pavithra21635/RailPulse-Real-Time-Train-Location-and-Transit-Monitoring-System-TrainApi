@@ -48,7 +48,7 @@ async function validateUserLogin(req, res) {
 }
 
 function generateNewAccessToken(availableUser) {
-    return jwt.sign(availableUser, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '10m'});
+    return jwt.sign(availableUser, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '60m'});
 }
 
 module.exports = {validateUserLogin};
