@@ -44,35 +44,4 @@ const userController = require('../controllers/userController');
  */
 router.post('/login', userController.validateUserLogin)
 
-/**
- * @swagger
- * /user/register:
- *  post:
- *   summary: Register a new user with username and password
- *   tags: [User]
- *   requestBody:
- *     required: true
- *     content:
- *       application/json:
- *         schema:
- *           type: object
- *           properties:
- *             username:
- *               type: string
- *               description: The Username.
- *               example: newuser
- *             password:
- *               type: string
- *               description: The password.
- *               example: newpassword
- *   responses:
- *     '201':
- *       description: User registered successfully.
- *     '400':
- *       description: User already exists.
- *     '500':
- *       description: Error in registration.
- */
-router.post('/register', userController.registerUser);
-
 module.exports = router;

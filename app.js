@@ -59,11 +59,10 @@ mongoose.connection.on('error', function (err) {
 });
 
 app.use('/api/user', userRoute);
-
+app.use('/api/train-location', trainLocationRoute);
 
 
 app.use(getauthenticationToken);
-app.use('/api/train-location', trainLocationRoute);
 
 
 
