@@ -25,7 +25,7 @@ const {getauthenticationToken} = require('../middleware/authMiddleware');
  *     '500':
  *       description: Internal server error.
  */
-router.get('/', trainLocationController.getLastTwoTrainLocations);
-router.post('/', getauthenticationToken, trainLocationController.getLastTwoTrainLocations);
+//router.get('/', trainLocationController.getLastTwoTrainLocations);
+router.get('/', getauthenticationToken, trainLocationController.getLastTenTrainLocations);
 
 module.exports = router;

@@ -17,6 +17,7 @@ function getauthenticationToken(req, res, next) {
             return res.sendStatus(403);
         }
         req.availableUser = availableUser;
+        console.log('user avaialable, session is valid');
         next();
     });
 }
