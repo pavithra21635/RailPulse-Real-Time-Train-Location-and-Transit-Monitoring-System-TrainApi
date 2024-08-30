@@ -46,7 +46,11 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 
 app.use(express.json());
-app.use(cors());
+
+
+app.use(cors({
+    origin: 'https://trainapi-13vx.onrender.com' // Allow only this origin
+  }));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
