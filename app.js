@@ -16,8 +16,8 @@ const swaggerOptions = {
     swaggerDefinition: {
         openapi: '3.0.0',
         info: {
-            title: 'Weather API',
-            description: 'API for managing district wise weather data ',
+            title: 'Train API',
+            description: 'API for managing train location data ',
             version: '1.0.0',
         },
         servers: [
