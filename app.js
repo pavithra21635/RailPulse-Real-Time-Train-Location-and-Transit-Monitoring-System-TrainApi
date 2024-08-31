@@ -17,12 +17,12 @@ const swaggerOptions = {
         openapi: '3.0.0',
         info: {
             title: 'Train API',
-            description: 'API for managing train location data ',
+            description: 'API for managing district wise train data ',
             version: '1.0.0',
         },
         servers: [
             {
-                url: 'http://localhost:3001/api',
+                url: 'https://trainapi-13vx.onrender.com/api',
             },
         ],
         components: {
@@ -48,6 +48,8 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use(express.json());
 app.use(cors());
 
+
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 mongoose.connection.on('connected', function () {
@@ -59,10 +61,11 @@ mongoose.connection.on('error', function (err) {
 });
 
 app.use('/api/user', userRoute);
-app.use('/api/train-location', trainLocationRoute);
+
 
 
 app.use(getauthenticationToken);
+app.use('/api/train-location', trainLocationRoute);
 
 
 

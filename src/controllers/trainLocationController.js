@@ -1,7 +1,7 @@
 const trainLocationData = require('../models/trainLocationModel');
 
 
-async function getLastTwoTrainLocations(req, res) {
+async function getLastTenTrainLocations(req, res) {
     try {
         
         const latestTrainLocations = await trainLocationData.find().sort({ timestamp: -1 }).limit(10);
@@ -14,4 +14,4 @@ async function getLastTwoTrainLocations(req, res) {
     }
 }
 
-module.exports = {getLastTwoTrainLocations,};
+module.exports = {getLastTenTrainLocations,};
