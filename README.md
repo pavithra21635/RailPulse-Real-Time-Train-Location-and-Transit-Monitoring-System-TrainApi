@@ -30,23 +30,24 @@ This project uses **MongoDB** for storing train location data and includes **Swa
 
 ## 📂 Project Structure
 
+```text
 project-root/
-├── src/
-│ ├── config/
-│ │ └── database.js
-│ ├── controllers/
-│ │ ├── trainLocationController.js
-│ │ └── userController.js
-│ ├── middleware/
-│ │ └── authMiddleware.js
-│ ├── models/
-│ │ ├── trainLocationModel.js
-│ │ └── userModel.js
-│ └── routes/
-│ ├── trainLocationRoutes.js
-│ └── userRoutes.js
-├── .env (Not committed to GitHub)
-├── .gitignore
-├── package.json
-├── server.js (or index.js)
-└── README.md
+├─ src/
+│  ├─ config/
+│  │  └─ database.js
+│  ├─ controllers/
+│  │  ├─ trainLocationController.js
+│  │  └─ userController.js
+│  ├─ middleware/
+│  │  └─ authMiddleware.js
+│  ├─ models/
+│  │  ├─ trainLocationModel.js
+│  │  └─ userModel.js
+│  └─ routes/
+│     ├─ trainLocationRoutes.js
+│     └─ userRoutes.js
+├─ .env               # Not committed to GitHub
+├─ .gitignore
+├─ package.json
+├─ server.js (or index.js)
+└─ README.md
