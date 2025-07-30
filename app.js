@@ -22,7 +22,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: 'https://trainapi-13vx.onrender.com/api',
+                url: process.env.SERVER_URL || 'http://localhost:3001/api',
             },
         ],
         components: {
@@ -46,6 +46,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 
 app.use(express.json());
+//access from different domains
 app.use(cors());
 
 

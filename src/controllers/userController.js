@@ -28,8 +28,7 @@ async function validateUserLogin(req, res) {
        const hextrimdbPassword = convertStringToHex(trimdbPassword);
        const hextrimresPassword = convertStringToHex(trimresPassword);
 
-       console.log('DB Password', hextrimdbPassword);
-       console.log('res Password', hextrimresPassword);
+       
 
       // if(hextrimresPassword === hextrimdbPassword) {
         console.log('correct password');
