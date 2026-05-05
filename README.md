@@ -1,7 +1,6 @@
-# 🚆 Real-Time Train Location API
+# 🚆 RailPulse -  Real-Time Train Location & Transit Monitoring System - API
 
-A **Node.js + Express** REST API for tracking train locations and managing user authentication with **JWT**.  
-This project uses **MongoDB** for storing train location data and includes **Swagger API Documentation**.
+A robust RESTful backend engine designed to facilitate real-time transit telemetry and train tracking. Engineered with **Node.js + Express** , the system features a secure JWT authentication layer and **MongoDB** for high-performance data persistence. Includes comprehensive **Swagger API Documentation** (OpenAPI)  for standardized integration and testing.
 
 ---
 
